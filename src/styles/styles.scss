@@ -1,0 +1,42 @@
+@use 'variables';
+@use 'mixins';
+@use 'reset';
+@use 'typography';
+@use 'animations';
+@use 'utilities';
+@use 'responsive';
+@use 'buttons';
+html,
+body {
+  background: var(--bg);
+  color: var(--text);
+  transition: .3s ease;
+}
+
+section {
+  padding: 100px 0;
+}
+
+section:nth-child(even) {
+  background: #ffffff;
+}
+::selection{
+    background:#2563eb;
+    color:white;
+}
+::-webkit-scrollbar{
+    width:8px;
+}
+
+::-webkit-scrollbar-track{
+    background:#f3f4f6;
+}
+
+::-webkit-scrollbar-thumb{
+    background:#2563eb;
+    border-radius:20px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+    background:#1d4ed8;
+}

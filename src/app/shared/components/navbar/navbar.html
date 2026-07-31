@@ -1,0 +1,65 @@
+<header
+  class="navbar"
+  [class.scrolled]="scrolled()">
+
+  <div class="container">
+
+    <a routerLink="/" class="logo">
+      Nova<span>Studio</span>
+    </a>
+
+    <nav
+      class="nav-links"
+      [class.open]="menuOpen()">
+
+      @for (item of navigation.items; track item.label) {
+
+        <a
+          [routerLink]="item.route"
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: true }"
+          (click)="closeMenu()">
+
+          {{ item.label }}
+
+        </a>
+
+      }
+
+    </nav>
+
+    <div class="nav-actions">
+
+      <button
+        class="theme-btn"
+        type="button"
+         (click)="toggleTheme()"
+        aria-label="Toggle Theme">
+
+        🌙
+
+      </button>
+
+      <button
+        class="menu-btn"
+        type="button"
+        aria-label="Toggle Menu"
+        (click)="toggleMenu()">
+
+        @if (menuOpen()) {
+
+          ✕
+
+        } @else {
+
+          ☰
+
+        }
+
+      </button>
+
+    </div>
+
+  </div>
+
+</header>

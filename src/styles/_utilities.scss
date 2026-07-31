@@ -1,0 +1,19 @@
+.service-card,
+.project-card,
+.testimonial-card,
+.pricing-card {
+  background: #fff;
+  border-radius: 24px;
+  padding: 30px;
+  border: 1px solid #eef2f7;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.06);
+  transition: all 0.3s ease;
+}
+
+.service-card:hover,
+.project-card:hover,
+.testimonial-card:hover,
+.pricing-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.12);
+}

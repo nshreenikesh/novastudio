@@ -1,0 +1,242 @@
+/*====================================
+        TRUSTED BRANDS
+====================================*/
+
+.trusted{
+
+padding:120px 0;
+
+position:relative;
+
+overflow:hidden;
+
+background:linear-gradient(
+180deg,
+#f8fbff,
+#ffffff
+);
+
+}
+
+/* Background Glow */
+
+.trusted::before{
+
+content:"";
+
+position:absolute;
+
+width:500px;
+
+height:500px;
+
+border-radius:50%;
+
+background:radial-gradient(
+rgba(37,99,235,.12),
+transparent 70%
+);
+
+top:-180px;
+
+left:-180px;
+
+pointer-events:none;
+
+}
+
+.trusted-header{
+
+text-align:center;
+
+margin-bottom:70px;
+
+}
+
+.trusted-header h2{
+
+font-size:46px;
+
+font-weight:800;
+
+margin:18px 0;
+
+color:#111827;
+
+}
+
+.trusted-header p{
+
+font-size:18px;
+
+color:#6b7280;
+
+max-width:620px;
+
+margin:auto;
+
+line-height:1.8;
+
+}
+
+/* Grid */
+
+.brand-grid{
+
+display:grid;
+
+grid-template-columns:repeat(3,1fr);
+
+gap:30px;
+
+align-items:center;
+
+}
+
+/* Cards */
+
+.brand-card{
+
+background:rgba(255,255,255,.85);
+
+backdrop-filter:blur(16px);
+
+border:1px solid rgba(255,255,255,.7);
+
+border-radius:24px;
+
+padding:45px 20px;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+box-shadow:0 20px 45px rgba(15,23,42,.08);
+
+transition:.45s;
+
+animation:floating 7s ease-in-out infinite;
+
+}
+
+/* Different timing */
+
+.brand-card:nth-child(2){
+
+animation-delay:.4s;
+
+}
+
+.brand-card:nth-child(3){
+
+animation-delay:.8s;
+
+}
+
+.brand-card:nth-child(4){
+
+animation-delay:1.2s;
+
+}
+
+.brand-card:nth-child(5){
+
+animation-delay:1.6s;
+
+}
+
+/* Hover */
+
+.brand-card:hover{
+
+transform:translateY(-12px) scale(1.04);
+
+box-shadow:0 28px 65px rgba(37,99,235,.18);
+
+border-color:#2563eb;
+
+}
+
+/* Brand Name */
+
+.brand-card span{
+
+font-size:2rem;
+
+font-weight:800;
+
+background:linear-gradient(
+135deg,
+#2563eb,
+#06b6d4
+);
+
+-webkit-background-clip:text;
+
+-webkit-text-fill-color:transparent;
+
+letter-spacing:.5px;
+
+}
+
+/* Floating */
+
+@keyframes floating{
+
+0%{
+
+transform:translateY(0);
+
+}
+
+50%{
+
+transform:translateY(-10px);
+
+}
+
+100%{
+
+transform:translateY(0);
+
+}
+
+}
+
+/* Tablet */
+
+@media(max-width:992px){
+
+.brand-grid{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+}
+
+/* Mobile */
+
+@media(max-width:600px){
+
+.brand-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.trusted-header h2{
+
+font-size:34px;
+
+}
+
+.brand-card{
+
+padding:35px 20px;
+
+}
+
+}

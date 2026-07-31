@@ -1,0 +1,151 @@
+@media (max-width: 992px) {
+
+  .hero .container,
+  .about-grid,
+  .contact-content,
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .services-grid,
+  .portfolio-grid,
+  .testimonial-grid,
+  .pricing-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+
+  .services-grid,
+  .portfolio-grid,
+  .testimonial-grid,
+  .pricing-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero h1,
+  .section-header h2,
+  .about-content h2,
+  .contact-info h2 {
+    font-size: 2.2rem;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+  }
+}
+/* ===========================
+   Laptop (≤ 1200px)
+=========================== */
+
+@media (max-width: 1200px) {
+
+  .container {
+    width: min(1100px, 92%);
+  }
+
+}
+
+
+/* ===========================
+   Tablet (≤ 992px)
+=========================== */
+
+@media (max-width: 992px) {
+
+  .hero .container,
+  .about-grid,
+  .contact-content,
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+
+  .hero-content,
+  .about-content,
+  .contact-info {
+    text-align: center;
+  }
+
+  .hero-actions {
+    justify-content: center;
+  }
+
+  .services-grid,
+  .portfolio-grid,
+  .testimonial-grid,
+  .pricing-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+}
+
+
+/* ===========================
+   Mobile (≤ 768px)
+=========================== */
+
+@media (max-width: 768px) {
+
+  .hero {
+    padding: 80px 0;
+  }
+
+  .hero h1,
+  .section-header h2,
+  .about-content h2,
+  .contact-info h2 {
+    font-size: 2.2rem;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .hero-actions .btn {
+    width: 100%;
+  }
+
+  .services-grid,
+  .portfolio-grid,
+  .testimonial-grid,
+  .pricing-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .stats {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+
+/* ===========================
+   Small Mobile (≤ 480px)
+=========================== */
+
+@media (max-width: 480px) {
+
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+
+  .section-header h2 {
+    font-size: 1.8rem;
+  }
+
+  .hero p,
+  .section-header p {
+    font-size: 15px;
+  }
+
+  .service-card,
+  .project-card,
+  .testimonial-card,
+  .pricing-card {
+    padding: 24px;
+  }
+
+}

@@ -1,0 +1,65 @@
+<section class="pricing" data-aos="fade-up">
+
+  <div class="container">
+
+    <div class="section-header">
+
+      <span class="section-tag">Pricing</span>
+
+      <h2>Simple & Transparent Pricing</h2>
+
+      <p>
+        Choose the plan that best fits your business.
+      </p>
+
+    </div>
+
+    <div class="pricing-grid">
+
+      @for(plan of plans; track plan.name){
+
+      <div
+        class="pricing-card"
+        [class.featured]="plan.featured">
+
+        @if(plan.featured){
+
+        <div class="badge">
+          Most Popular
+        </div>
+
+        }
+
+        <h3>{{ plan.name }}</h3>
+
+        <h1>
+          {{ plan.price }}
+        </h1>
+
+        <p>{{ plan.description }}</p>
+
+        <ul>
+
+          @for(feature of plan.features; track feature){
+
+          <li>
+            ✅ {{ feature }}
+          </li>
+
+          }
+
+        </ul>
+
+        <button class="btn btn-primary">
+          Get Started
+        </button>
+
+      </div>
+
+      }
+
+    </div>
+
+  </div>
+
+</section>

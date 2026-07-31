@@ -1,0 +1,290 @@
+<section class="contact" data-aos="fade-up">
+
+  <!-- Decorative Background -->
+  <div class="bg-circle bg-circle-1"></div>
+  <div class="bg-circle bg-circle-2"></div>
+
+  <div class="container">
+
+    <!-- ================= HEADER ================= -->
+
+    <div class="section-header">
+
+      <span class="section-tag">
+        Contact Us
+      </span>
+
+      <h2>
+        Let's Build Something Amazing
+      </h2>
+
+      <p>
+        Whether you're launching a startup, redesigning your brand, or
+        building a modern web application, we're here to bring your ideas
+        to life.
+      </p>
+
+    </div>
+
+    <!-- ================= CONTENT ================= -->
+
+    <div class="contact-wrapper">
+
+      <!-- LEFT SIDE -->
+
+      <div class="contact-info">
+
+        <div class="info-card">
+
+          <div class="icon-box">
+
+            📧
+
+          </div>
+
+          <div>
+
+            <h3>Email</h3>
+
+            <p>hello@novastudio.com</p>
+
+          </div>
+
+        </div>
+
+        <div class="info-card">
+
+          <div class="icon-box">
+
+            📞
+
+          </div>
+
+          <div>
+
+            <h3>Phone</h3>
+
+            <p>+91 98765 43210</p>
+
+          </div>
+
+        </div>
+
+        <div class="info-card">
+
+          <div class="icon-box">
+
+            📍
+
+          </div>
+
+          <div>
+
+            <h3>Location</h3>
+
+            <p>Chennai, Tamil Nadu, India</p>
+
+          </div>
+
+        </div>
+
+        <div class="info-card">
+
+          <div class="icon-box">
+
+            🕒
+
+          </div>
+
+          <div>
+
+            <h3>Working Hours</h3>
+
+            <p>Monday - Friday</p>
+
+            <span>09:00 AM – 06:00 PM</span>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- RIGHT SIDE -->
+
+      <div class="contact-card">
+
+        @if(successMessage){
+
+        <div class="success-message">
+
+          {{ successMessage }}
+
+        </div>
+
+        }
+
+        @if(errorMessage){
+
+        <div class="error-message">
+
+          {{ errorMessage }}
+
+        </div>
+
+        }
+
+        <form
+          [formGroup]="contactForm"
+          (ngSubmit)="submitForm()"
+          class="contact-form">
+
+          <div class="row">
+
+            <div class="form-group">
+
+              <label>Full Name</label>
+
+              <input
+                type="text"
+                formControlName="name"
+                placeholder="John Doe">
+
+              @if(submitted && contactForm.get('name')?.invalid){
+
+              <small class="error">
+
+                Please enter your name.
+
+              </small>
+
+              }
+
+            </div>
+
+            <div class="form-group">
+
+              <label>Email Address</label>
+
+              <input
+                type="email"
+                formControlName="email"
+                placeholder="john@example.com">
+
+              @if(submitted && contactForm.get('email')?.invalid){
+
+              <small class="error">
+
+                Enter a valid email.
+
+              </small>
+
+              }
+
+            </div>
+
+          </div>
+
+          <div class="form-group">
+
+            <label>Subject</label>
+
+            <input
+              type="text"
+              formControlName="subject"
+              placeholder="Website Development">
+
+            @if(submitted && contactForm.get('subject')?.invalid){
+
+            <small class="error">
+
+              Subject is required.
+
+            </small>
+
+            }
+
+          </div>
+
+          <div class="form-group">
+
+            <label>Your Message</label>
+
+            <textarea
+              rows="7"
+              formControlName="message"
+              placeholder="Tell us about your project..."></textarea>
+
+            @if(submitted && contactForm.get('message')?.invalid){
+
+            <small class="error">
+
+              Message must contain at least 10 characters.
+
+            </small>
+
+            }
+
+          </div>
+
+          <button
+            class="submit-btn"
+            type="submit"
+            [disabled]="loading">
+
+            @if(loading){
+
+            Sending...
+
+            } @else {
+
+            Send Message →
+
+            }
+
+          </button>
+
+        </form>
+
+      </div>
+
+    </div>
+
+    <!-- ================= MAP ================= -->
+
+    <div class="map-card">
+
+      <iframe
+        src="https://www.google.com/maps?q=Chennai&output=embed"
+        loading="lazy">
+      </iframe>
+
+    </div>
+
+    <!-- ================= CTA ================= -->
+
+    <div class="cta-section">
+
+      <h2>
+
+        Ready to Start Your Project?
+
+      </h2>
+
+      <p>
+
+        Let's build something extraordinary together.
+
+      </p>
+
+      <button class="cta-btn">
+
+        Schedule a Meeting →
+
+      </button>
+
+    </div>
+
+  </div>
+
+</section>

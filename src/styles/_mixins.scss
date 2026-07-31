@@ -1,0 +1,14 @@
+@mixin container {
+  width: min(1200px, 90%);
+  margin-inline: auto;
+}
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin transition {
+  transition: all .3s ease;
+}

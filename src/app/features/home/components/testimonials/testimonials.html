@@ -1,0 +1,55 @@
+<section class="testimonials" data-aos="fade-up">
+
+  <div class="container">
+
+    <div class="section-header">
+
+      <span class="section-tag">Testimonials</span>
+
+      <h2>What Our Clients Say</h2>
+
+      <p>
+        Trusted by startups, enterprises, and businesses around the world.
+      </p>
+
+    </div>
+
+    <div class="testimonial-grid">
+
+      @for(item of testimonials; track item.name){
+
+      <div class="testimonial-card">
+
+        <div class="stars">
+          ⭐⭐⭐⭐⭐
+        </div>
+
+        <p class="message">
+          "{{ item.message }}"
+        </p>
+
+        <div class="profile">
+
+          <div class="avatar">
+            {{ item.name.charAt(0) }}
+          </div>
+
+          <div>
+
+            <h4>{{ item.name }}</h4>
+
+            <span>{{ item.role }}</span>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      }
+
+    </div>
+
+  </div>
+
+</section>
