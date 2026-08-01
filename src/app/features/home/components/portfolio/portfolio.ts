@@ -15,22 +15,21 @@ interface PortfolioItem {
 })
 export class Portfolio {
 
-  readonly projects: PortfolioItem[] = [
-    {
-      title: 'Finance Dashboard',
-      category: 'Angular 21',
-      image: 'https://picsum.photos/600/400?random=1'
-    },
-    {
-      title: 'Healthcare Portal',
-      category: 'UI / UX',
-      image: 'https://picsum.photos/600/400?random=2'
-    },
-    {
-      title: 'Travel Booking',
-      category: 'Web Application',
-      image: 'https://picsum.photos/600/400?random=3'
-    }
-  ];
-
+  readonly portfolioItems = [
+  {
+    title: 'Business Website',
+    category: 'Web Design',
+    image: 'assets/images/portfolio1.jpg'
+  },
+  {
+    title: 'Mobile App',
+    category: 'UI / UX',
+    image: 'assets/images/portfolio2.jpg'
+  },
+  {
+    title: 'Dashboard',
+    category: 'Development',
+    image: 'assets/images/portfolio3.jpg'
+  },
+];
 }

@@ -2,8 +2,12 @@
 @use '../../../../styles/mixins' as *;
 
 .navbar {
-  position: sticky;
+  position: fixed;
   top: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+
   z-index: 1000;
 
   background: rgba(255, 255, 255, 0.55);
@@ -15,21 +19,16 @@
 
   transition: all .35s ease;
 }
+
 .navbar.scrolled {
-
   background: rgba(255,255,255,.95);
-
   border-bottom: 1px solid $border;
-
   box-shadow: 0 8px 30px rgba(0,0,0,.08);
-
 }
 
 .container {
   @include container;
-
   height: 80px;
-
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -119,52 +118,99 @@
   display: none;
   font-size: 20px;
 }
-
 /* ==========================
    Tablet & Mobile
 ========================== */
 
 @media (max-width: 992px) {
 
+  .container {
+    height: 72px;
+    padding: 0 20px;
+  }
+
+  .logo {
+    font-size: 24px;
+  }
+
   .menu-btn {
     display: flex;
   }
 
-  .nav-links {
+  .nav-actions {
+    gap: 10px;
+  }
 
+  .nav-links {
     position: absolute;
-    top: 90px;
-    left: 0;
-    right: 0;
+    top: 72px;
+    left: 20px;
+    right: 20px;
 
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    align-items: center;
+    justify-content: center;
 
-    padding: 25px;
+    gap: 18px;
+    padding: 24px;
 
     background: #fff;
-    border-radius: 16px;
+    border-radius: 18px;
     box-shadow: $shadow;
 
     opacity: 0;
     visibility: hidden;
-    transform: translateY(-15px);
+    pointer-events: none;
 
-    transition: all .3s ease;
+    transform: translateY(-15px);
+    transition: all .35s ease;
+
+    z-index: 999;
 
     a {
       width: 100%;
       text-align: center;
+      padding: 10px 0;
     }
   }
 
   .nav-links.open {
-
     opacity: 1;
     visibility: visible;
+    pointer-events: auto;
     transform: translateY(0);
+  }
+}
 
+@media (max-width: 576px) {
+
+  .container {
+    height: 68px;
+    padding: 0 16px;
   }
 
+  .logo {
+    font-size: 22px;
+  }
+
+  .theme-btn,
+  .menu-btn {
+    width: 40px;
+    height: 40px;
+  }
+
+  .nav-links {
+    top: 68px;
+    left: 16px;
+    right: 16px;
+    padding: 20px;
+    gap: 16px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .nav-links a {
+    font-size: 15px;
+  }
 }

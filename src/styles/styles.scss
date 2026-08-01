@@ -6,6 +6,21 @@
 @use 'utilities';
 @use 'responsive';
 @use 'buttons';
+*,
+*::before,
+*::after{
+    box-sizing:border-box;
+}
+
+html{
+    overflow-x:hidden;
+    scroll-behavior:smooth;
+}
+
+body{
+    overflow-x:hidden;
+    width:100%;
+}
 html,
 body {
   background: var(--bg);
@@ -39,4 +54,7 @@ section:nth-child(even) {
 
 ::-webkit-scrollbar-thumb:hover{
     background:#1d4ed8;
+}
+body {
+  padding-top: 80px;
 }

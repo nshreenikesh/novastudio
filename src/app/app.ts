@@ -10,7 +10,9 @@ import * as AOS from 'aos';
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet],
+  imports: [
+    RouterOutlet
+  ],
   templateUrl: './app.html',
   styleUrl: './app.scss'
 })
@@ -28,7 +30,9 @@ export class App implements AfterViewInit {
           behavior: 'instant' as ScrollBehavior
         });
 
-        AOS.refresh();
+        setTimeout(() => {
+          AOS.refreshHard();
+        }, 100);
 
       });
 

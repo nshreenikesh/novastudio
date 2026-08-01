@@ -15,20 +15,26 @@
   gap: 50px;
 }
 
+.footer-brand h2 {
+  font-size: 32px;
+  margin-bottom: 18px;
+}
+
 .footer-brand p {
-  margin-top: 20px;
   color: #cbd5e1;
   line-height: 1.8;
 }
 
 .footer-links,
-.footer-contact {
+.footer-contact,
+.footer-social {
   display: flex;
   flex-direction: column;
 }
 
 .footer-links h4,
-.footer-contact h4 {
+.footer-contact h4,
+.footer-social h4 {
   margin-bottom: 20px;
 }
 
@@ -36,16 +42,41 @@
   color: #cbd5e1;
   text-decoration: none;
   margin-bottom: 12px;
-  transition: color .3s;
+  transition: 0.3s;
 }
 
 .footer-links a:hover {
   color: #60a5fa;
+  transform: translateX(5px);
 }
 
 .footer-contact p {
   color: #cbd5e1;
   margin-bottom: 12px;
+}
+
+.social-icons {
+  display: flex;
+  gap: 14px;
+}
+
+.social-icons a {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: #1e293b;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-decoration: none;
+  transition: 0.3s ease;
+  font-size: 18px;
+}
+
+.social-icons a:hover {
+  background: #2563eb;
+  transform: translateY(-5px);
 }
 
 .footer-bottom {
@@ -54,4 +85,82 @@
   padding-top: 25px;
   text-align: center;
   color: #94a3b8;
-}   
+}
+
+/* ===========================
+   Tablet
+=========================== */
+
+@media (max-width: 992px) {
+
+  .footer {
+    padding: 70px 0 30px;
+  }
+
+  .footer-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+  }
+
+}
+
+/* ===========================
+   Mobile
+=========================== */
+
+@media (max-width: 768px) {
+
+  .footer {
+    padding: 60px 0 30px;
+  }
+
+  .container {
+    width: 92%;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 35px;
+    text-align: center;
+  }
+
+  .footer-links,
+  .footer-contact,
+  .footer-social {
+    align-items: center;
+  }
+
+  .footer-brand p {
+    max-width: 500px;
+    margin: auto;
+  }
+
+  .social-icons {
+    justify-content: center;
+  }
+
+}
+
+/* ===========================
+   Small Mobile
+=========================== */
+
+@media (max-width: 480px) {
+
+  .footer {
+    padding: 50px 0 25px;
+  }
+
+  .footer-brand h2 {
+    font-size: 28px;
+  }
+
+  .footer-brand p {
+    font-size: 15px;
+  }
+
+  .footer-bottom {
+    font-size: 14px;
+  }
+
+}

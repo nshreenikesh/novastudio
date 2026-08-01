@@ -227,6 +227,40 @@ transform:translateY(-20px);
 }
 
 }
+@media (max-width:768px){
+
+  .about-hero{
+    padding:90px 0 70px;
+  }
+
+  .hero-content{
+    max-width:100%;
+    text-align:center;
+  }
+
+  .hero-content h1{
+    font-size:42px;
+    line-height:1.15;
+  }
+
+  .hero-content p{
+    max-width:100%;
+    font-size:16px;
+  }
+
+  .hero-buttons{
+    flex-direction:column;
+    align-items:stretch;
+    gap:16px;
+  }
+
+  .primary-btn,
+  .secondary-btn{
+    width:100%;
+    text-align:center;
+  }
+
+}
 /*====================================
           OUR STORY
 ====================================*/
@@ -700,179 +734,6 @@ grid-template-columns:1fr;
 .value-card{
 
 padding:30px;
-
-}
-
-}
-/*====================================
-          COMPANY TIMELINE
-====================================*/
-
-.timeline-section{
-
-padding:110px 0;
-
-background:#fff;
-
-}
-
-.timeline{
-
-position:relative;
-
-max-width:900px;
-
-margin:70px auto 0;
-
-}
-
-.timeline::before{
-
-content:"";
-
-position:absolute;
-
-left:70px;
-
-top:0;
-
-bottom:0;
-
-width:4px;
-
-background:linear-gradient(
-180deg,
-#2563eb,
-#06b6d4
-);
-
-border-radius:10px;
-
-}
-
-.timeline-item{
-
-display:flex;
-
-gap:35px;
-
-margin-bottom:50px;
-
-position:relative;
-
-}
-
-.timeline-year{
-
-width:70px;
-
-height:70px;
-
-border-radius:50%;
-
-background:linear-gradient(
-135deg,
-#2563eb,
-#06b6d4
-);
-
-display:flex;
-
-justify-content:center;
-
-align-items:center;
-
-color:white;
-
-font-weight:700;
-
-flex-shrink:0;
-
-box-shadow:0 10px 25px rgba(37,99,235,.25);
-
-z-index:2;
-
-}
-
-.timeline-content{
-
-flex:1;
-
-background:white;
-
-padding:30px;
-
-border-radius:22px;
-
-border:1px solid #edf2ff;
-
-box-shadow:0 15px 40px rgba(15,23,42,.06);
-
-transition:.35s;
-
-}
-
-.timeline-content:hover{
-
-transform:translateY(-8px);
-
-box-shadow:0 25px 60px rgba(37,99,235,.14);
-
-}
-
-.timeline-content h3{
-
-font-size:26px;
-
-font-weight:800;
-
-color:#111827;
-
-margin-bottom:14px;
-
-}
-
-.timeline-content p{
-
-color:#6b7280;
-
-line-height:1.8;
-
-}
-
-@media(max-width:768px){
-
-.timeline::before{
-
-left:35px;
-
-}
-
-.timeline-item{
-
-gap:20px;
-
-}
-
-.timeline-year{
-
-width:55px;
-
-height:55px;
-
-font-size:14px;
-
-}
-
-.timeline-content{
-
-padding:22px;
-
-}
-
-.timeline-content h3{
-
-font-size:22px;
 
 }
 
@@ -1414,5 +1275,159 @@ left:16px !important;
 right:auto;
 
 }
+
+}
+/*====================================
+      EXTRA RESPONSIVE FIXES
+====================================*/
+
+@media (max-width:992px){
+
+  .our-story,
+  .mission-section,
+  .values-section,
+  .timeline-section,
+  .team-section,
+  .about-cta{
+    padding:90px 0;
+  }
+
+  .story-grid{
+    gap:45px;
+  }
+
+  .story-content h2{
+    font-size:40px;
+  }
+
+}
+
+@media (max-width:768px){
+
+  .container{
+    width:min(100%,92%);
+  }
+
+  .our-story,
+  .mission-section,
+  .values-section,
+  .timeline-section,
+  .team-section,
+  .about-cta{
+    padding:80px 0;
+  }
+
+  .story-content h2{
+    font-size:34px;
+  }
+
+  .story-content p{
+    font-size:16px;
+  }
+
+  .info-card{
+    padding:28px 20px;
+  }
+
+  .info-card h3{
+    font-size:34px;
+  }
+
+  .mission-card{
+    padding:28px;
+  }
+
+  .icon-circle{
+    width:64px;
+    height:64px;
+    font-size:28px;
+  }
+
+  .mission-card h3{
+    font-size:26px;
+  }
+
+  .value-card{
+    padding:26px;
+  }
+
+  .value-icon{
+    width:60px;
+    height:60px;
+    font-size:26px;
+  }
+
+  .value-card h3{
+    font-size:24px;
+  }
+
+  .team-card{
+    padding:30px 24px;
+  }
+
+  .avatar{
+    width:72px;
+    height:72px;
+    font-size:22px;
+  }
+
+  .about-cta .cta-buttons{
+    flex-direction:column;
+    align-items:stretch;
+  }
+
+  .about-cta .primary-btn,
+  .about-cta .secondary-btn{
+    width:100%;
+    text-align:center;
+  }
+
+}
+
+@media (max-width:480px){
+
+  .hero-content h1{
+    font-size:34px;
+  }
+
+  .hero-tag{
+    font-size:14px;
+  }
+
+  .story-content h2{
+    font-size:30px;
+  }
+
+  .mission-card h3{
+    font-size:22px;
+  }
+
+  .value-card h3{
+    font-size:22px;
+  }
+
+  .timeline-content{
+    padding:20px;
+  }
+
+  .timeline-content h3{
+    font-size:20px;
+  }
+
+  .team-card h3{
+    font-size:22px;
+  }
+
+  .about-cta .cta-box{
+    padding:32px 20px;
+  }
+
+  .about-cta h2{
+    font-size:28px;
+  }
+
+  .about-cta p{
+    font-size:16px;
+  }
 
 }

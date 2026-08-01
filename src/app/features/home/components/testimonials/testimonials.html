@@ -25,16 +25,14 @@
         </div>
 
         <p class="message">
-          "{{ item.message }}"
+          "{{ item.review }}"
         </p>
 
         <div class="profile">
 
-          <div class="avatar">
-            {{ item.name.charAt(0) }}
-          </div>
+          <img class="avatar" [src]="item.image" [alt]="item.name">
 
-          <div>
+          <div class="client-info">
 
             <h4>{{ item.name }}</h4>
 

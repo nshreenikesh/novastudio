@@ -15,21 +15,24 @@ interface Testimonial {
 })
 export class Testimonials {
 
-  readonly testimonials: Testimonial[] = [
+  readonly testimonials = [
     {
-      name: 'John Anderson',
-      role: 'CEO, FinTech Solutions',
-      message: 'Nova Studio transformed our vision into an outstanding product. The design and performance exceeded our expectations.'
-    },
-    {
-      name: 'Sarah Wilson',
-      role: 'Founder, Creative Hub',
-      message: 'Professional, responsive, and highly skilled. The team delivered an exceptional website on time.'
+      name: 'Sarah Johnson',
+      role: 'CEO, TechVision',
+      image: 'assets/images/client1.jpg',
+      review: 'Nova Studio transformed our online presence with a modern, high-performing website.'
     },
     {
       name: 'Michael Brown',
-      role: 'Product Manager',
-      message: 'The user experience and attention to detail were impressive. We would gladly work with Nova Studio again.'
+      role: 'Founder, StartHub',
+      image: 'assets/images/client2.jpg',
+      review: 'The team delivered exactly what we envisioned. Fast, professional and highly skilled.'
+    },
+    {
+      name: 'Emily Davis',
+      role: 'Marketing Director',
+      image: 'assets/images/client3.jpg',
+      review: 'Our customer engagement improved dramatically after the redesign. Highly recommended.'
     }
   ];
 
